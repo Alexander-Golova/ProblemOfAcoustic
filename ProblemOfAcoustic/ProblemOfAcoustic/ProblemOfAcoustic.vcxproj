@@ -144,11 +144,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BasicDataProblem.h" />
+    <ClInclude Include="CInhomogeneity.h" />
     <ClInclude Include="CSourses.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CInhomogeneity.cpp" />
     <ClCompile Include="CSourses.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">

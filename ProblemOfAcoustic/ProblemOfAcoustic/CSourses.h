@@ -10,6 +10,7 @@ public:
 	
 	void SetSourceCoordinates(Point node);
 	std::vector<Point> GetSourceCoordinates() const;
+	std::complex<float> Function(const Point source, const Point point) const;
 
 private:
 	int m_number = 0;
