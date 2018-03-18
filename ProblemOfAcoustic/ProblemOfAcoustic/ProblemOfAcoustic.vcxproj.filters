@@ -30,6 +30,9 @@
     <ClInclude Include="CInhomogeneity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CDetectors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CInhomogeneity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CDetectors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

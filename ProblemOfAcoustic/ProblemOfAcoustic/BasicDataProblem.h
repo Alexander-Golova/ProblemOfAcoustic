@@ -8,6 +8,8 @@ const float inverseN = 1.0f / NUMBER_PARTITION_POINTS;
 
 const size_t N = NUMBER_PARTITION_POINTS + 1;
 
+const size_t N_QUBE = N * N * N;
+
 const float c_0 = 1.0f; // TODO
 
 const float omega = 1.0f; // TODO
