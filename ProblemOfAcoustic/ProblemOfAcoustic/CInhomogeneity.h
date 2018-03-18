@@ -11,6 +11,7 @@ public:
 	void SetCoordinate(Point node);
 	Point GetCoordinate() const;
 	void SetRefractionIndex();
+	void WriteRefractionIndex();
 
 private:
 	Point m_coordinate;

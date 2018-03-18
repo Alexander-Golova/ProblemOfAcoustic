@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "CInhomogeneity.h"
 
+using namespace std;
 
 CInhomogeneity::CInhomogeneity()
 {
@@ -25,15 +26,32 @@ Point CInhomogeneity::GetCoordinate() const
 void CInhomogeneity::SetRefractionIndex()
 {
 	float sigma = 16.0f;
-	for (size_t i = 0; i <= N; ++i)
+	for (size_t i = 0; i < N; ++i)
 	{
-		for (size_t j = 0; j <= N; ++j)
+		for (size_t j = 0; j < N; ++j)
 		{
-			for (size_t k = 0; k <= N; ++k)
+			for (size_t k = 0; k < N; ++k)
 			{
 				m_refractionIndex[i][j][k] = 0.4f * exp(-((i * m_step.x - 0.6f) * (i * m_step.x - 0.6f) +
 					(j * m_step.y - 0.6f) * (j * m_step.y - 0.6f) + (k * m_step.z - 0.6f) * (k * m_step.z - 0.6f)) * sigma);
 			}
 		}
 	}
+}
+
+void CInhomogeneity::WriteRefractionIndex()
+{
+	ofstream file_xi("refraction_index.txt");
+	file_xi << fixed << setprecision(6);
+	for (size_t i = 0; i < N; ++i)
+	{
+		for (size_t j = 0; j < N; ++j)
+		{
+			for (size_t k = 0; k < N; ++k)
+			{
+				file_xi << m_refractionIndex[i][j][k] << " ";
+			}
+		}
+	}
+	file_xi.close();
 }
